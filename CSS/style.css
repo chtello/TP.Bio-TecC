@@ -4,6 +4,13 @@
     height: 100%;
     background-color:  #000057 ;
 }
+.miniconteiner{
+    display: flexbox;
+    width: 100%;
+    height: 100%;
+    background-color:  #000057 ;
+}
+
 .Genes{
 width: auto;
 height: auto;
@@ -22,4 +29,34 @@ border-color: black;
 }
 .modal-title{
     color: #000057;
+}
+.text1{
+    color: #29a49c;
+}
+.carouselslide{
+    display: flex;
+
+}
+.d-blockw-100{
+    width: auto;
+    height:auto;
+    border-radius: 20%;
+}
+.d-blockw-10{
+    width: 30%;
+    height:30%;
+    border-radius: 20%;
+}
+.footer {
+    display: flex;
+    margin-top:95%;
+    background-color: #29a49c;
+    position: absolute;
+    width: auto;
+    height:5%;
+    text-align: center;
+}
+.name{
+    width: 100%;
+    height:5%;
 }
