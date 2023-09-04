@@ -264,3 +264,4 @@ Delt.addEventListener("click", function ()  {
     Br3.value = "";
     Br4.value = "";
 });
+module.exports = trabGen;

@@ -4,5 +4,6 @@ const path = require ("path");
 const ejs = require("ejs");
 const mongoose = require ("mongoose");
 const app = express();
+
 module.exports = app;
 
