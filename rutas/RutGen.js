@@ -9,3 +9,4 @@ router.post("/Genes",(req,res) =>{
     .then((data)=>res.json(data),console.log("dato resivido correctamente"))
     .catch((error)=>console.log ("tu error es :"+error))
 });
+

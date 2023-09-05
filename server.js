@@ -4,8 +4,6 @@ const app = require("./app");
 const GenRutas = require("./rutas/RutGen")
 let port = 3000;
 
-
-
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 
