@@ -264,4 +264,23 @@ Delt.addEventListener("click", function ()  {
     Br3.value = "";
     Br4.value = "";
 });
-module.exports = trabGen;
+const MLH1 = ["A","T","C","C","G","C","C","C","A","T","C","T","C","G","G","C","C","C","A","C","C","A","A","A","G","T","G","C","T","G","G","G","A","T","T","A","C","A","G","G","C","G","T","G","A","G","C","C","A","C"];
+const Hip = document.getElementById("CreateTr");
+Hip.addEventListener("click", function ()  {
+        for ( j = 0,i = 0; j < CaDG1.length, i < ARNm.length; j++,i++) {
+if (CaDG1[i] == "A") {
+    ARNm[j] = ARNm[j] + "U";
+}
+if (CaDG1[i] == "T") {
+    ARNm[j] = ARNm[j] + "A";
+}
+if (CaDG1[i] == "G") {
+    ARNm[j] = ARNm[j] + "C";
+}
+if (CaDG1[i] == "C") {
+    ARNm[j] = ARNm[j] + "G";
+}
+    }
+    Br3.value = ARNm;
+    return ARNm 
+});
