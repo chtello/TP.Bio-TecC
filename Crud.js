@@ -6,4 +6,4 @@ const GenSchema = mongoose.Schema({
     Traduccion:{ARNm},
     Polipeptidos:{CPol}
 });
-module.exports=mongoose.model("Gen",GenesSchema);
+

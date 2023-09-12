@@ -31,6 +31,12 @@ border-color: black;
 .fs-4{
     color: #35A29F;
 }
+.TGG{
+    justify-content: center;
+    width: auto;
+    height:auto;
+    color: #020296;
+}
 .modal-title{
     color: #000057;
 }
@@ -39,7 +45,6 @@ border-color: black;
 }
 .carouselslide{
     display: flex;
-
 }
 .d-blockw-100{
     width: auto;

@@ -2,10 +2,16 @@ let Br = document.getElementById("barra");
 let Br2 = document.getElementById("barra2");
 let Br3 = document.getElementById("barra3");
 let Br4 = document.getElementById("barra4");
+let Br5 = document.getElementById("barra5");
+let Br6 = document.getElementById("barra6");
+let Br7 = document.getElementById("barra7");
+let Br8 = document.getElementById("barra8");
+let Br9 = document.getElementById("barra9");
 let L = ["G","T","A","C"];
 let CaDG = ["A","T","G","","","","","","","","","","","","","T","G","A"];
 let CaDG1 = ["","","","","","","","","","","","","","","","","",""];
 let ARNm =["","","","","","","","","","","","","","","","","",""];
+let SDADN =["A","T","G","","","","","","","","","","","","","T","G","A"];
 let CPol = [""];
 
 const NewG = document.getElementById("CreateGe");
@@ -258,30 +264,49 @@ Delt.addEventListener("click", function ()  {
     ARNm =["","","","","","","","","","","","","","","","","",""];
     CaDG =["T","A","C","","","","","","","","","","","","","T","G","A"];
     CaDG1 = ["","","","","","","","","","","","","","","","","",""];
+    SDADN =["T","A","C","","","","","","","","","","","","","T","G","A"];
     CPol = [""];
     Br.value = "";
     Br2.value = "";
     Br3.value = "";
     Br4.value = "";
+    Br5.value = "";
+    Br6.value = "";
+    Br7.value = "";
+    Br8.value = "";
+    Br9.value = "";
 });
-const MLH1 = ["A","T","C","C","G","C","C","C","A","T","C","T","C","G","G","C","C","C","A","C","C","A","A","A","G","T","G","C","T","G","G","G","A","T","T","A","C","A","G","G","C","G","T","G","A","G","C","C","A","C"];
-const Hip = document.getElementById("CreateTr");
-Hip.addEventListener("click", function ()  {
-        for ( j = 0,i = 0; j < CaDG1.length, i < ARNm.length; j++,i++) {
-if (CaDG1[i] == "A") {
-    ARNm[j] = ARNm[j] + "U";
-}
-if (CaDG1[i] == "T") {
-    ARNm[j] = ARNm[j] + "A";
-}
-if (CaDG1[i] == "G") {
-    ARNm[j] = ARNm[j] + "C";
-}
-if (CaDG1[i] == "C") {
-    ARNm[j] = ARNm[j] + "G";
+const Delt2 = document.getElementById("Delte2");
+Delt2.addEventListener("click", function ()  {
+    SDADN =["T","A","C","","","","","","","","","","","","","T","G","A"];
+    Br5.value = "";
+    Br6.value = "";
+    Br7.value = "";
+    Br8.value = "";
+    Br9.value = "";
+});
+const NewG2 = document.getElementById("CrSG");
+NewG2.addEventListener("click", function ()  {
+    for (let i = 0; i < SDADN.length; i++) {
+        let LA = Math.floor(Math.random() * L.length);
+        if (SDADN[i] == "") {     
+            SDADN[i] = SDADN[i] + L[LA];
+        }
+    }
+    Br5.value = SDADN;
+    return SDADN
+});
+const Hip1 = document.getElementById("AnGn1");
+Hip1.addEventListener("click", function ()  {
+        for ( j = 1,i = 0; i + 1 < SDADN.length; j++,i++) {
+if (SDADN[i] == "C" && SDADN[j] == "G" ) {
+    Br6.value = " Sí, Ocurrira Una Metilación";
+    Br7.value = "Su Función Es: Reparar el ADN";
+    Br8.value = " Es Hipermetilación";
+    Br9.value = "Los Canseres Asociados Son: Colon, Estómago y Endometrio";
 }
     }
-    Br3.value = ARNm;
-    return ARNm 
 });
 
+
+module.exports = Gen;
