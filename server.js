@@ -1,15 +1,23 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = require("./app");
+const path = require("path");
 const GenRutas = require("./rutas/RutGen")
 let port = 3000;
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "AxGen")));
 
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 
+app.get("/GG", (req, res) => {
+  res.render("GGuar");
+});
+
 app.get("/", (req, res) => {
     res.render("index");
 });
+
 //mongoose
 //.connect("mongodb+srv://chtello:BaseAdN@cluster0.i9xi2fa.mongodb.net/?retryWrites=true&w=majority")
 //    .then(console.log("Connected to database"))

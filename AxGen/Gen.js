@@ -309,4 +309,4 @@ if (SDADN[i] == "C" && SDADN[j] == "G" ) {
 });
 
 
-module.exports = Gen;
+//module.exports = Gen;
