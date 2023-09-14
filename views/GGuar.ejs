@@ -27,19 +27,19 @@
                 <div class="modal-body">
                     <h5 class="modal-title">Secuencia ADN</h5>
                     <input type="text" class="form-control" id="barra"/>
-                    <input type="text" class="form-control" id="barra2"/>
+                    <input type="text" name="adn" class="form-control" id="barra2"/>
                     <button type="button" class="btn btn-primary" id="CreateGe">Generar Secuencia</button>
                     
                 </div>
                     <div class="modal-body">
                         <h5 class="modal-title">Traducción ARNm</h5>
-                        <input type="text" class="form-control" id="barra3"/>
+                        <input type="text" name="arnm" class="form-control" id="barra3"/>
                         <button type="button" class="btn btn-primary" id="CreateTr">Traducir</button>
                         
                     </div>
                     <div class="modal-body">
                         <h5 class="modal-title">Polipéptidos(Proteinas)</h5>
-                        <input type="text" class="form-control" id="barra4"/>
+                        <input type="text" name="polipéptidos" class="form-control" id="barra4"/>
                         <button type="button" class="btn btn-primary" id="CreatePo">Traducir Proteinas</button>
                         
                     </div>
@@ -85,7 +85,7 @@
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
             <li class="page-item"><a class="page-link" href="/">Pag1</a></li>
-            <li class="page-item"><a class="page-link" href="/GG">Pag2</a></li>
+            <li class="page-item"><a class="page-link" href="/GGuar">Pag2</a></li>
             <li class="page-item"><a class="page-link" href="/N">Pag3</a></li>
         </ul>
     </nav>
@@ -105,9 +105,9 @@
                     <% ArGn.forEach(genes => { %>
                         <tr>
                             <th scope="row"><%= genes.id %></th>
-                            <td><%= genes.ADN %></td>
-                            <td><%= genes.ARNm %></td>
-                            <td><%= genes.Polipéptidos %></td>
+                            <td><%= genes.adn %></td>
+                            <td><%= genes.arnm %></td>
+                            <td><%= genes.polipéptidos %></td>
                         </tr>
                     <% }) %>
                 <% } %>
