@@ -86,12 +86,35 @@
         <ul class="pagination justify-content-center">
             <li class="page-item"><a class="page-link" href="/">Pag1</a></li>
             <li class="page-item"><a class="page-link" href="/GG">Pag2</a></li>
+            <li class="page-item"><a class="page-link" href="/N">Pag3</a></li>
         </ul>
     </nav>
     </div>
-    <div class="footer">
-        <p class="name">Cristian Tello    /   Martina Nievas  </p>
+    <div class="minicont">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#id</th>
+                    <th scope="col">ADN</th>
+                    <th scope="col">ARNm</th>
+                    <th scope="col">Polipéptidos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (ArGn.length > 0) { %>
+                    <% ArGn.forEach(genes => { %>
+                        <tr>
+                            <th scope="row"><%= genes.id %></th>
+                            <td><%= genes.ADN %></td>
+                            <td><%= genes.ARNm %></td>
+                            <td><%= genes.Polipéptidos %></td>
+                        </tr>
+                    <% }) %>
+                <% } %>
+            </tbody>
+        </table>
     </div>
+
 </div>
 <script src="/Gen.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
