@@ -24,6 +24,7 @@ NewG.addEventListener("click", function ()  {
     }
     return CaDG
 });
+
 const NewG1 = document.getElementById("CreateGe");
 NewG1.addEventListener("click", function ()  {
         for ( j = 0,i = 0; j < CaDG.length, i < CaDG1.length; j++,i++) {
@@ -307,6 +308,3 @@ if (SDADN[i] == "C" && SDADN[j] == "G" ) {
 }
     }
 });
-
-
-//module.exports = Gen;

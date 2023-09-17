@@ -10,6 +10,7 @@ app.use(bodyParser.json())
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "AxGen")));
+
 app.use("/",require("./router/CrdGenes"));
 app.use("/GGuar",require("./router/CrdGenes"));
 app.use("/N",require("./router/CrdGenes"));
