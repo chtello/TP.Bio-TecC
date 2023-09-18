@@ -3,26 +3,30 @@ const router = express.Router();
 const MGen = require("../model/MGen");
 
 
-router.get("/N", (req, res) => {
-  res.render("N");
-});
-  router.get("/", (req, res) => {
-    res.render("index");
-});
 
 
-router.get("/GGuar", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
-          const ArGnDB = await MGen.find()
-        console.log("hola" + ArGnDB)
+          const arayGensDB = await MGen.find()
         res.render("GGuar", {
-        ArGn : ArGnDB
+          arayGens : arayGensDB
       })
   } catch (error) {
     console.log(error)
   }
 })
 
-
+router.post("/", async (req,res)=>{
+  const body = req.body
+  try {
+      const GenDB = new MGen(body)
+      await GenDB.save()
+  res.redirect("/GGuar")
+  console.log(GenDB)
+  } catch (error) {
+      console.log(error)
+  }
+  });
+  
 
 module.exports = router;
